@@ -1,0 +1,17 @@
+[package]
+name = "qrex"
+version = "0.1.0"
+authors = ["Brandon Hamilton"]
+edition = "2021"
+
+[lib]
+name = "qrex"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = { version = "0.35.0", default-features = false, features = ["derive", "nif_version_2_15"] }
+image = "0.25"
+rxing = "0.6"
+bardecoder = { git = "https://github.com/brandonhamilton/bardecoder", rev = "be2c9ee3b9fd73ab185ae22a72d86e2d11b8eba1" }
+rqrr = "0.8.0"

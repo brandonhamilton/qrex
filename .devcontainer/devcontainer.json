@@ -1,0 +1,21 @@
+{
+	"name": "Development environment",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile.dev"
+	},
+	"postCreateCommand": "mix local.hex --force && mix local.rebar --force",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"JakeBecker.elixir-ls",
+				"rust-lang.rust-analyzer"
+			],
+			"settings": {
+				"rust-analyzer.linkedProjects": [
+					"./native/qrex/Cargo.toml"
+				]
+			}
+		}
+	}
+}
